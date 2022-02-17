@@ -29,4 +29,19 @@ export default function Home() {
       setIsConnected(false);
     }
   }
+
+  async function execute() {
+    if (typeof window.ethereum !== "undefined") {
+      const contractAddress = "";
+      const abi = ;
+      const contract = new ethers.Contract(contractAddress, abi, signer);
+      try {
+        await contract.store(42);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      console.log("Please install MetaMask");
+    }
+  }
 }

@@ -32,7 +32,7 @@ export default function Home() {
 
   async function execute() {
     if (typeof window.ethereum !== "undefined") {
-      const contractAddress = "";
+      const contractAddress = "0x3Ac9d517Cf754Fcd4A1e9138D3e85389cC11c6d1";
       const abi = ;
       const contract = new ethers.Contract(contractAddress, abi, signer);
       try {

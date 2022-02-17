@@ -145,4 +145,20 @@ export default function Home() {
       console.log("Please install MetaMask");
     }
   }
+
+  return (
+    <div>
+      {hasMetamask ? (
+        isConnected ? (
+          "Connected! "
+        ) : (
+          <button onClick={() => connect()}>Connect</button>
+        )
+      ) : (
+        "Please install metamask"
+      )}
+
+      {isConnected ? <button onClick={() => execute()}>Execute</button> : ""}
+    </div>
+  );
 }

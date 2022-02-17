@@ -137,7 +137,7 @@ export default function Home() {
       ];
       const contract = new ethers.Contract(contractAddress, abi, signer);
       try {
-        await contract.store(42);
+        await contract.store(1564);
       } catch (error) {
         console.log(error);
       }
